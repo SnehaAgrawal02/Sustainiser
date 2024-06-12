@@ -12,3 +12,7 @@ app.use('/',web);
 app.listen(port,()=>{
     console.log('listening on port 3000');
 });
+
+// app.get('/login', (req, res) => {
+//     res.render('user/login');
+//   });

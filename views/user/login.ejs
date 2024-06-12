@@ -1,0 +1,38 @@
+<%- include('./header.ejs') %>
+
+<!-- ***** Login Section Start ***** -->
+<section class="section" id="login">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="/login" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-email">Confirm Email</label>
+                            <input type="email" id="confirm-email" name="confirmEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="picture">Upload Picture (Optional)</label>
+                            <input type="file" id="picture" name="picture" class="form-control-file">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Login Section End ***** -->
+
+<%- include('./footer.ejs') %>
