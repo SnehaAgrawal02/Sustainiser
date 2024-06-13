@@ -37,6 +37,8 @@ app.set('view engine', 'ejs');
 const web = require('./routes/web');
 app.use('/',web);
 
+
+
 app.listen(port,()=>{
     console.log('listening on port 3000');
 });
