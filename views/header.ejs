@@ -27,15 +27,15 @@
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
+    <!-- ***** Preloader Start ***** --> -->
+    <!-- <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
+    </div> -->
+    <!-- ***** Preloader End *****
 
 
     <!-- ***** Header Area Start ***** -->
@@ -52,10 +52,14 @@
 
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
+                            <li class="scroll-to-section"><a href="/" class="menu-item">Home</a></li>
+                            <li class="scroll-to-section"><a href="/about" class="menu-item">About</a></li>
+                            <li class="scroll-to-section"><a href="user/challenge.ejs" class="menu-item">Challenge</a></li>
+                            <li class="scroll-to-section"><a href="user/dashboard.ejs" class="menu-item">Dashboard</a>
+                            
                             <li class="scroll-to-section"><a href="/#welcome" class="menu-item">Home</a></li>
                             <li class="scroll-to-section"><a href="/#about" class="menu-item">About</a></li>
-                            <li><a href="/dashboard">Dashboard</a>
-                            </li>
+                            <li><a href="/dashboard">Dashboard</a></li>
                             <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
@@ -88,13 +92,13 @@
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <% if(message.length > 0){ %>
+                        <% if( typeof message !== 'undefined' && message.length > 0){ %>
                             <div class="alert alert-success">
                                 <!-- To Print -->
                                 <%= message %>
                             </div>
                           <% } %>
-                          <% if(msg.length > 0){ %>
+                          <% if(typeof msg !== 'undefined' && msg.length > 0){ %>
                               <div class="alert alert-danger">
                                   <!-- To Print -->
                                   <%= msg %>

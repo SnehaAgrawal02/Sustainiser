@@ -1,0 +1,120 @@
+<%- include('../header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Spicy+Rice&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"> 
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="css/challenge.css">
+</head>
+<body>
+
+
+
+ <main>
+  <div class="container text-center ChalBox">
+    <h1 id="heading1">Rise to the Challenge Ahead</h1>
+    <div class="row "> 
+      
+      <div class="col col-lg-4 col-md-4 col-sm-8 chal">
+        <div class="card" >
+          <img src="images/plastic.jpg" class="card-img-top imgTop" alt="Plastic Reduce">
+          <div class="card-body">
+            <h3 class="card-title"><span>Reduce Plastic Use</span> (Daily Challenge)</h3>
+            <p class="card-text">For today, aim to minimize your plastic waste. Carry a reusable water bottle and avoid single-use plastic items such as straws, bags, and packaging. Log your progress by sharing a photo of your reusable items or alternatives you used instead of plastic.
+              </p>
+              <span class="score">Points:10</span>
+          </div>
+      </div>
+    </div>
+
+      <div class="col col-lg-4 col-md-4 col-sm-8 chal">
+        <div class="card" >
+          <img src="images/recycle.jpg" class="card-img-top imgTop" alt="Zero waste">
+        
+          <div class="card-body">
+            <h3 class="card-title"><span>Zero Waste Week </span>(Weekly Challenge)</h3>
+            <p class="card-text">This week, challenge yourself to generate as little waste as possible. Focus on recycling, composting organic waste, and avoiding products with excessive packaging. Keep a journal or log to track your waste reduction efforts and share tips with the community.</p>
+            <span class="score">Points:50</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="col col-lg-4 col-md-4 col-sm-8 chal">
+        <div class="card" >
+          <img src="images/energy.jpg" class="card-img-top imgTop" alt="save energy">
+          
+          <div class="card-body">
+            <h3 class="card-title"><span> Energy Saver Month</span> (Monthly Challenge)</h3>
+            <p class="card-text">Commit to reducing your energy consumption throughout the month. Turn off lights when not in use, unplug electronics and use energy-efficient devices. Submit your electricity bill at the start and end of the month to showcase your reduction in energy usage.</p>
+            <span class="score">Points:200</span>
+           </div>
+
+          </div>
+
+           </div>
+        
+   
+      <!-- <div class="col specialChal">
+        <div class="card" >
+         
+          <img src="images/community2.png" class="card-img-top imgBottom" alt="save energy">
+          
+          <div class="card-body">
+            <h3 class="card-title"><span> Community Green Initiative </span> (Special Challenge)</h3>
+            <p class="card-text">Participate in a community-based project to promote sustainability. Organize or join a local clean-up event, tree planting, or recycling drive. Document your involvement with photos and a brief report on the event’s impact. Collaborate with local organizations or schools to maximize your efforts. Additionally, educate participants on the importance of sustainability and provide resources for ongoing eco-friendly practices.</p>
+            <span class="score">Points:500</span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row g-0 bg-light position-relative specialChal">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="images/community2.png" class="w-100 imgBottom" alt="...">
+    </div>
+    <div class="col-md-6 p-4 ps-md-0">
+      <h5 class="mt-0 card-title specialHead" ><span> Community Green Initiative </span> (Special Challenge)</h5>
+      <p class=" card-text specialText">Participate in a community-based project to promote sustainability. Organize or join a local clean-up event, tree planting, or recycling drive. Document your involvement with photos and a brief report on the event’s impact. Collaborate with local organizations or schools to maximize your efforts. Additionally, educate participants on the importance of sustainability and provide resources for ongoing eco-friendly practices.</p>
+      <span class="score" id="score">Points:500</span>
+    </div>
+  </div>
+    
+</main>
+    
+
+
+  <div class="container-fluid LeadBox" >
+    <h1 id="heading2">Leaderboard</h1>
+    <div class="LeadSubBox">
+      <div class="vstack gap-11">
+        
+          
+     <% LeaderTable.forEach((user,index)=>{ %>
+      <div class="leaderDiv">
+            <div class="hstack gap-4">
+          <div class=" "><%= index+1 %></div>
+          <div class=" "><%= user.name %></div>
+          <div class="  ms-auto"><%= user.score %></div>
+          <div class=" "><img src="images/award.png" alt=""></div>
+        </div>
+      
+    <% }) %>
+  </div>
+  
+    </div>
+  </div>
+  
+  </div >
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <%- include('../footer') %>

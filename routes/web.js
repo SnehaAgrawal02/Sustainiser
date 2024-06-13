@@ -6,12 +6,12 @@ const checkUserAuth = require('../middleware/auth')
 
 router.get('/', FrontController.home)
 router.get('/login', FrontController.login)
-<<<<<<< HEAD
-router.get('/dashboard', FrontController.dashboard)
+
+router.get('/challenge',FrontController.challenge)
+
 router.get('/policy', FrontController.policy)
-=======
+
 router.get('/dashboard',checkUserAuth, FrontController.dashboard)
->>>>>>> 9bb4d5ee09926f133a8255ee92605f18027f5dcf
 
 router.post('/userinsert', FrontController.userinsert)
 router.post('/verifyLogin', FrontController.verifyLogin)
