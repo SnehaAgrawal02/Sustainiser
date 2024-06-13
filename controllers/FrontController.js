@@ -28,6 +28,7 @@ class FrontController {
             console.log(err);
         }
     }
+    
     // Challenge section
     static challenge= async (req,res)=>{
         try{
@@ -52,6 +53,7 @@ class FrontController {
             console.log(err);
         }
     }
+
     //Policy
     static policy = async (req, res) => {
         try{

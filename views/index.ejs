@@ -1,5 +1,38 @@
 <%-include('./header.ejs')%>
 
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text">
+        <div class="container">
+            <div class="row">
+                <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <% if( typeof message !== 'undefined' && message.length > 0){ %>
+                        <div class="alert alert-success">
+                            <!-- To Print -->
+                            <%= message %>
+                        </div>
+                        <% } %>
+                        <% if(typeof msg !== 'undefined' && msg.length > 0){ %>
+                            <div class="alert alert-danger">
+                                <!-- To Print -->
+                                <%= msg %>
+                            </div>
+                        <% } %>
+                    <h1>Empower your path to a  <em>GREENER</em> Future</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi ab similique expedita doloribus aut vero obcaecati quis non explicabo accusamus adipisci perferendis, consectetur culpa vel, nihil, ex autem officiis?</p> 
+                    <a href="/#about" class="main-button-slider">KNOW US BETTER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Header Text End ***** -->
+     
+</div>
+<!-- ***** Welcome Area End ***** -->
+
 <!-- ***** Features Big Item Start ***** -->
 <section class="section" id="about">
     <div class="container">
