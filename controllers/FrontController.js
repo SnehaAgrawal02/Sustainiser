@@ -22,6 +22,14 @@ class FrontController {
             console.log(err);
         }
     }
+    //Policy
+    static policy = async (req, res) => {
+        try{
+            res.render('policy');
+        }catch(err){
+            console.log(err);
+        }
+    }
 
 }
 
