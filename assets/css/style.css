@@ -160,7 +160,7 @@ a.main-button {
   font-size: 14px;
   border-radius: 25px;
   padding: 15px 25px;
-  background-color: #f4813f;
+  background-color: #93b500;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -182,7 +182,7 @@ button.main-button {
   font-size: 14px;
   border-radius: 25px;
   padding: 15px 25px;
-  background-color: #f4813f;
+  background-color: #38a3a5;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -213,7 +213,7 @@ button.main-button:hover {
 
 .center-heading h2 em {
   font-style: normal;
-  color: #f4813f;
+  color: #22577A;
 }
 
 .center-heading p {
@@ -848,9 +848,10 @@ testimonials
 --------------------------------------------
 */
 .right-image-decor {
-  background-image: url(../images/right-bg-decor.png);
+  background-image: url(../images/rightbag.png);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right ;
+  opacity: 50%;
   position: absolute;
   width: 100%;
   display: inline-block;
@@ -870,7 +871,7 @@ testimonials
 
 #testimonials .item .testimonial-content {
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgba(128,237,153,1) 0%, rgba(56,163,165,1) 100%);
   margin-left: 60px;
   padding: 40px 30px;
   text-align: center;
@@ -924,7 +925,7 @@ testimonials
   text-align: center;
   display: inline-block;
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgba(128,237,153,1) 0%, rgba(56,163,165,1) 100%);
   position: absolute;
 }
 
@@ -941,7 +942,7 @@ testimonials
   text-align: center;
   display: inline-block;
   background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: linear-gradient(145deg, rgba(128,237,153,1) 0%, rgba(56,163,165,1) 100%);
   position: absolute;
 }
 
@@ -976,7 +977,7 @@ footer
 footer {
   margin-top: 200px;
   padding-top: 120px;
-  background-image: url(../images/footer-bg.png);
+  background-image: url(../images/wave.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
