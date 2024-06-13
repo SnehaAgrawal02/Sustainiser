@@ -650,10 +650,12 @@ welcome
 .welcome-area {
   width: 100%;
   height: 100vh;
-  min-height: 793px;
-  background-image: url(../images/banner-bg.png);
+  min-height: 1100px;
+  background-image: url(../images/tree2.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position:right top;
+  background-size: 750px;
+
 }
 
 .welcome-area .header-text .left-text {
