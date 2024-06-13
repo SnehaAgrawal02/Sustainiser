@@ -14,7 +14,7 @@ class FrontController {
 
     static home = async (req, res) => {
         try{
-            res.render('index',{message:req.flash('success'),msg:req.flash('error')});
+            res.render('index',);
         }catch(err){
             console.log(err);
         }
@@ -26,6 +26,20 @@ class FrontController {
             res.render('user/login',{message:req.flash('success'),msg:req.flash('error')});
         }catch(err){
             console.log(err);
+        }
+    }
+    // Challenge section
+    static challenge= async (req,res)=>{
+        try{
+           const top= await UserModel.find().sort({score:-1,name:1}).limit(10).exec()
+           const bottom=await UserModel.find().sort({score:1,name:1}).limit(1).exec()
+        
+        
+        const LeaderTable= [...top,...bottom];
+           res.render('user/challenge', { LeaderTable });
+        }catch(err){
+            console.log(err,err.message);
+            res.status(500).send('An error occurred while fetching leaderboard data.');
         }
     }
 
@@ -197,6 +211,10 @@ class FrontController {
             console.log(err);
         }
     }
+    
+    
 }
+
+
 
 module.exports = FrontController

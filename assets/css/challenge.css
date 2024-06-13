@@ -1,0 +1,92 @@
+
+.imgTop{
+    width: 100%;
+    height: 300px;
+}
+
+
+.chal{
+    height: 500px;
+    text-align: center;
+ 
+    
+}
+.specialChal{
+    margin-top: 150px;
+}
+
+.card{
+    border-radius: 20px;
+}
+
+
+.card-text{
+    font-family: "Gwendolyn-bold", cursive;
+    margin-bottom: 25px;
+    background-color: rgb(198, 243, 198);
+    font-weight: bold;
+
+}
+.specialHead{
+    font-size: 1.8rem;
+   
+}
+
+
+.card-title{
+    font-family: "Spicy Rice", serif;
+    margin-bottom: 10px;
+    color: rgb(27, 96, 40);
+}
+
+#heading1{
+margin-top: 30px ;
+margin-bottom: 30px;
+text-shadow: 3px 3px 8px rgb(118, 249, 118);
+color: rgb(5, 98, 5);
+}
+
+#heading2{
+    text-shadow: 3px 3px 8px rgb(142, 245, 142);
+color: rgb(5, 98, 5);
+}
+
+.score{
+    border: 2px solid green;
+    border-radius: 20px;
+    padding:11px;
+    background-color: rgb(202, 243, 202);
+    margin-top: 5px;
+}
+
+#score{
+    margin-top: 16px;
+}
+
+.imgBottom{
+height: 350px;
+}
+
+.LeadBox{
+    text-align: center;
+    margin-top: 36px;
+   
+}
+
+.LeadSubBox{
+    width:66%;
+    margin: auto;
+}
+
+.LeadSubBox img{
+    height: 26px;
+    width: 26px;
+}
+  
+.leaderDiv{
+    text-align: center;
+    background-color: rgb(184, 244, 184);
+    color: rgb(227, 71, 9);
+    font-size: 1.2rem;
+   
+}

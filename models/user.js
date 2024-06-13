@@ -17,17 +17,25 @@ const UserSchema = new mongoose.Schema(
         image: {
             public_id: {
                 type: String,
-                required: true,
+                // required: true,
             },
             url: {
                 type: String,
-                required: true,
+                // required: true,
             }
+        },
+        score:{
+            type:Number,
+            default:0
+        },
+        Challenges:{
+            type:Number,
+            default:0
         }
     },
     { timestamps: true }
 );
 
-const UserModel = mongoose.model("user", UserSchema);
+const UserModel = mongoose.model("User", UserSchema);
 
 module.exports = UserModel;
