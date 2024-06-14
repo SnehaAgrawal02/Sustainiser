@@ -1,4 +1,5 @@
 const UserModel = require('../models/user')
+const PolicyModel = require('../models/policy');
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -57,7 +58,9 @@ class FrontController {
     //Policy
     static policy = async (req, res) => {
         try{
-            res.render('policy');
+            const policy = await PolicyModel.find()
+            // console.log(policy)
+            res.render('policy', {p:policy});
         }catch(err){
             console.log(err);
         }
