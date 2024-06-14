@@ -14,7 +14,7 @@ class FrontController {
 
     static home = async (req, res) => {
         try{
-            res.render('index',);
+            res.render('index',{message:req.flash('success'),msg:req.flash('error')});
         }catch(err){
             console.log(err);
         }
@@ -221,10 +221,6 @@ class FrontController {
             console.log(err);
         }
     }
-    
-    
 }
-
-
 
 module.exports = FrontController
