@@ -1,5 +1,5 @@
 const UserModel = require('../models/user')
-
+const axios= require("axios")
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -20,6 +20,18 @@ class FrontController {
         }
     }
 
+    static chart = async (req, res) => {
+        try{
+
+            res.render('user/charts');
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    // ChartAPI
+
+
     //Login User
     static login = async (req, res) => {
         try{
@@ -32,18 +44,69 @@ class FrontController {
     // Challenge section
     static challenge= async (req,res)=>{
         try{
-           const top= await UserModel.find().sort({score:-1,name:1}).limit(10).exec()
-           const bottom=await UserModel.find().sort({score:1,name:1}).limit(1).exec()
+
+
+            // Change
+
+           const plant= await UserModel.find({Domain:"Plantation"}).sort({score:-1,name:1}).limit(10).exec()
+           const recycle= await UserModel.find({Domain:"Recycling"}).sort({score:-1,name:1}).limit(10).exec()
+           const waste= await UserModel.find({Domain:"Best out of Waste"}).sort({score:-1,name:1}).limit(10).exec()
+           const carbon= await UserModel.find({Domain:"Reducing Carbon Emissions"}).sort({score:-1,name:1}).limit(10).exec()
+         
         
-        
-        const LeaderTable= [...top,...bottom];
-           res.render('user/challenge', { LeaderTable });
+           res.render('user/challenge', {plant,recycle,waste,carbon });
         }catch(err){
             console.log(err,err.message);
             res.status(500).send('An error occurred while fetching leaderboard data.');
         }
     }
-
+// Change
+    static chartData=async (req, res) => {
+        try {
+            const response1 = await axios.get('https://global-warming.org/api/co2-api');
+            const data1 = response1.data;
+             const objects1 =data1.co2.filter(item => item.year==="2024" && item.month==="6" )
+            //  console.log(objects)
+            // // Transform data if necessary
+            const transformedData1 = {
+                labels:  objects1.map(item =>`${item.year} ${item.month} ${item.day}`)
+                
+             ,
+                values:  objects1.map(item => item.trend)
+                
+            }
+            const response2 = await axios.get('https://global-warming.org/api/co2-api');
+            const data2 = response2.data;
+             const objects2 =data2.co2.filter(item => item.year==="2024" && item.month==="6" )
+            //  console.log(objects)
+            // // Transform data if necessary
+            const transformedData2= {
+                labels:  objects2.map(item =>`${item.year} ${item.month} ${item.day}`)
+                
+             ,
+                values:  objects2.map(item => item.trend)
+                
+            };
+            const response3 = await axios.get('https://global-warming.org/api/arctic-api ');
+            const data3 = response3.data;
+             const objects3 =data3.co2.filter(item => item.year==="2024" && item.month==="6" )
+            //  console.log(objects)
+            // // Transform data if necessary
+            const transformedData3 = {
+                labels:  objects3.map(item =>`${item.year} ${item.month} ${item.day}`)
+                
+             ,
+                values:  objects3.map(item => item.trend)
+                
+            };
+    
+            res.json({transformedData1,transformedData2,transformedData3});
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            res.status(500).send('Error fetching data');
+        }
+    }
+  
     //User Dashboard
     static dashboard = async (req, res) => {
         try{

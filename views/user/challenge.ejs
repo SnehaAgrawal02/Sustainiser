@@ -97,20 +97,76 @@
   <div class="container-fluid LeadBox" >
     <h1 id="heading2">Leaderboard</h1>
     <div class="LeadSubBox">
-      <div class="vstack gap-11">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="vstack gap-11">
         
           
-     <% LeaderTable.forEach((user,index)=>{ %>
-      <div class="leaderDiv">
-            <div class="hstack gap-4">
-          <div class=" "><%= index+1 %></div>
-          <div class=" "><%= user.name %></div>
-          <div class="  ms-auto"><%= user.score %></div>
-          <div class=" "><img src="images/award.png" alt=""></div>
+              <% plant.forEach((user,index)=>{ %>
+               <div class="leaderDiv">
+                     <div class="hstack gap-4">
+                   <div class=" "><%= index+1 %></div>
+                   <div class=" "><%= user.name %></div>
+                   <div class="  ms-auto"><%= user.score %></div>
+                   <div class=" "><img src="images/award.png" alt=""></div>
+                 </div>
+               
+             <% }) %>
+           </div>
+          </div>
+          <div class="col">
+            <div class="vstack gap-11">
+        
+          
+              <% recycle.forEach((user,index)=>{ %>
+               <div class="leaderDiv">
+                     <div class="hstack gap-4">
+                   <div class=" "><%= index+1 %></div>
+                   <div class=" "><%= user.name %></div>
+                   <div class="  ms-auto"><%= user.score %></div>
+                   <div class=" "><img src="images/award.png" alt=""></div>
+                 </div>
+               
+             <% }) %>
+           </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">
+            <div class="vstack gap-11">
+        
+          
+              <% waste.forEach((user,index)=>{ %>
+               <div class="leaderDiv">
+                     <div class="hstack gap-4">
+                   <div class=" "><%= index+1 %></div>
+                   <div class=" "><%= user.name %></div>
+                   <div class="  ms-auto"><%= user.score %></div>
+                   <div class=" "><img src="images/award.png" alt=""></div>
+                 </div>
+               
+             <% }) %>
+           </div>
+          </div>
+          <div class="col">
+            <div class="vstack gap-11">
+        
+          
+              <% carbon.forEach((user,index)=>{ %>
+               <div class="leaderDiv">
+                     <div class="hstack gap-4">
+                   <div class=" "><%= index+1 %></div>
+                   <div class=" "><%= user.name %></div>
+                   <div class="  ms-auto"><%= user.score %></div>
+                   <div class=" "><img src="images/award.png" alt=""></div>
+                 </div>
+               
+             <% }) %>
+           </div>
+          </div>
         </div>
-      
-    <% }) %>
-  </div>
+      </div>
+     
   
     </div>
   </div>
