@@ -3,7 +3,7 @@ const liveUrl = 'mongodb+srv://collablab2243:Sustainiser@cluster0.ddmucj4.mongod
 const localUrl = 'mongodb://127.0.0.1:27017/sustainiser'
 
 const connectDb = () => {
-    return mongoose.connect(localUrl)
+    return mongoose.connect(liveUrl)
     .then(()=>{
         console.log("Connected to MongoDB")
     }).catch((err)=>{
