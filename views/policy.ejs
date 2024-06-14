@@ -1,535 +1,116 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Policies by Gov. of India</title>
-</head>
-<body> -->
-
 <%-include('./header.ejs')%>
-
 
 <section style="background-color: #eee;" class="py-5">
     <div class="container py-5">
+        <button class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#addPolicy">Add a Policy</button>
 
-      <!-- PM Surya Ghar: Muft Bijli Yojana -->
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 border rounded-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                <img src="../images/PM Surya Ghar Muft Bijli Yojana.png" class="w-100" />
-                                <div class="hover-overlay">
-                                    <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-6">
-                            <a href="https://www.pmsuryaghar.gov.in/" style="text-decoration: none;" target="_blank"><h5>PM Surya Ghar: Muft Bijli Yojana</h5></a>
-                            <div class="d-flex flex-row">
-                                <div class="text-danger mb-1 me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                </div>
-                                <span>70</span>
-                            </div>
-                            <div class="mt-1 mb-0 text-muted small">
-                                <span class="text-primary"> • </span>
-                                <span>Renewable energy.</span>
-                                <span class="text-primary"> • </span>
-                                <span>Reduction in carbon emissions</span>
-                                <!-- <span class="text-primary"> • </span>
-                                <span>Human Capital<br /></span> -->
-                            </div>
-                            <p class="mb-4 mb-md-0">
-                              This scheme provides subsidies for installing rooftop solar panels for residential houses 
-                              and using solar energy for electricity, which will help save money on electricity bills. 
-                              This article covers everything about the Rooftop Solar Scheme or PM Surya Ghar Muft Bijli Yojana. 
-                            </p>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                            <div class="d-flex flex-column mt-4">
-                                <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox6">Add a Comment</button>
-                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection6">See Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentsSection6">
-                        <div class="card card-body">
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Rohit</h6>
-                                    <p class="mb-0">Kya iss scheme ke liye online apply karna padta h ?</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3 ms-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Satyam</h6>
-                                    <p class="mb-0">Yess</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentBox6">
-                        <div class="card card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                            <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!-- Jal Jeevan Mission -->
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 border rounded-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                <img src="../images/Jal Jeevan Mission.png" class="w-100" />
-                                <div class="hover-overlay">
-                                    <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-6">
-                            <a href="https://jaljeevanmission.gov.in/" style="text-decoration: none;" target="_blank"><h5>Jal Jeevan Mission</h5></a>
-                            <div class="d-flex flex-row">
-                                <div class="text-danger mb-1 me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                </div>
-                                <span>80</span>
-                            </div>
-                            <div class="mt-1 mb-0 text-muted small">
-                                <span>Safe Drinking Water</span>
-                                <span class="text-primary"> • </span>
-                                <span>Health Impact</span>
-                                <span class="text-primary"> • </span>
-                                <span>Productivity Boost<br /></span>
-                            </div>
-                            <p class="mb-4 mb-md-0">
-                                Jal Jeevan Mission aims to provide access to safe and adequate drinking water by 2024 to all 
-                                households.
-                            </p>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                            <div class="d-flex flex-column mt-4">
-                                <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox4">Add a Comment</button>
-                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection4">See Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentsSection4">
-                        <div class="card card-body">
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Priyanshu</h6>
-                                    <p class="mb-0">Kya ye aadhar wale address pe available h ?</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3 ms-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Satyam</h6>
-                                    <p class="mb-0">Jaha aap rhete ho , uss address pe!!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentBox4">
-                        <div class="card card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                            <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!-- 1st policy -->
-        <div class="row justify-content-center mb-3">
-            <div class="col-md-12 col-xl-10">
-                <div class="card shadow-0 border rounded-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                                <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                    <img src="../images/swachh-bharat-mission.png" class="w-100" />
+        <% p.forEach((policy) => { %>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card shadow-0 border rounded-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                    <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                        <img src="<%= policy.image.url %>" class="w-100" />
                                         <div class="hover-overlay">
                                             <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                              <a href="https://swachhbharatmission.ddws.gov.in/" target="_blank" style="text-decoration: none;"><h5>Swachh-Bharat-Mission</h5></a>
-                                <div class="d-flex flex-row">
-                                    <div class="text-danger mb-1 me-2">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                    </div>
-                                    <span>92</span>
-                                </div>
-                                <div class="mt-1 mb-0 text-muted small">
-                                    <span class="text-primary"> • </span>
-                                    <span>Cleanliness</span>
-                                    <span class="text-primary"> • </span>
-                                    <span>Rural Focused</span>
-                                    <span class="text-primary"> • </span>
-                                    <span>Disease Free<br /></span>
-                                </div>
-                                <!-- text-truncate -->
-                                <p class=" mb-4 mb-md-0">
-                                    Swachh Bharat Abhiyan is a significant cleanliness campaign which aims 
-                                    to eliminate open defecation and improve solid waste management.<br>
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                                <div class="d-flex flex-row align-items-center mb-1">
-                                    <!-- <h4 class="mb-1 me-1">Comments here</h4> -->
-                                    <!-- <span class="text-danger"><s>Add a Comment</s></span> -->
-                                </div>
-                                <!-- <h6 class="text-success">Comments</h6> -->
-                                <div class="d-flex flex-column mt-4">
-                                    <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox1">Add a Comment</button>
-                                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection1">See Comments</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse mt-4" id="commentsSection1">
-                            <div class="card card-body">
-                                <div class="d-flex mb-3">
-                                    <div class="flex-shrink-0">
-                                        <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">John</h6>
-                                        <p class="mb-0">It helped a lot</p>
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3 ms-4">
-                                    <div class="flex-shrink-0">
-                                        <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <a href="<%= policy.link %>" style="text-decoration: none;" target="_blank"><h5><%= policy.name %></h5></a>
+                                    <div class="d-flex flex-row">
+                                        <div class="text-danger mb-1 me-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa-regular fa-star" style="color: #120d0d;"></i>
+                                        </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Max</h6>
-                                        <p class="mb-0">Shut up</p>
+                                    <div class="mt-1 mb-0 text-muted small">
+                                        <% policy.advantages.forEach((advantage, index) => { %>
+                                            <span class="text-primary"> • </span>
+                                            <span><%= advantage %></span>
+                                        <% }) %>
+                                    </div>
+                                    <p class="mb-4 mb-md-0">
+                                        <%= policy.description %>
+                                    </p>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                    <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#addComment<%= policy._id %>">Add a Comment</button>
+                                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection<%= policy._id %>">See Comments</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="collapse mt-4" id="commentBox1">
-                            <div class="card card-body">
-                                <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                                <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
+                            <div class="collapse mt-4" id="commentsSection<%= policy._id %>">
+                                <div class="card card-body">
+                                    <% policy.comments.forEach((comment) => { %>
+                                        <div class="d-flex mb-3">
+                                            <div class="flex-shrink-0">
+                                                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-0"><%= comment.user %></h6>
+                                                <p class="mb-0"><%= comment.text %></p>
+                                            </div>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="addComment<%= policy._id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form action="/addComment" method="POST">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add a Comment</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input type="hidden" name="policyId" value="<%= policy._id %>">
+                                                <div class="mb-3">
+                                                    <label for="user" class="form-label">Your Name</label>
+                                                    <input type="text" class="form-control" id="user" name="user" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="text" class="form-label">Comment</label>
+                                                    <textarea class="form-control" id="text" name="text" rows="3" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Submit Comment</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      <!-- 2nd policy -->
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 border rounded-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                <img src="../images/National Smart Cities Mission.png" class="w-100" />
-                                    <div class="hover-overlay">
-                                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-6">
-                          <a href="https://smartcities.gov.in/" style="text-decoration: none;" target="_blank"><h5>National Smart Cities Mission</h5></a>
-                            <div class="d-flex flex-row">
-                                <div class="text-danger mb-1 me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                </div>
-                                <span>67</span>
-                            </div>
-                            <div class="mt-1 mb-0 text-muted small">
-                                <span class="text-primary"> • </span>
-                                <span>Smart Cities</span>
-                                <span class="text-primary"> • </span>
-                                <span>Better Infrastructure</span>
-                                <span class="text-primary"> • </span>
-                                <span>Happy Life<br /></span>
-                            </div>
-                            <!-- text-truncate -->
-                            <p class=" mb-4 mb-md-0">
-                              National Smart Cities Mission, which is an urban renewal and retrofitting programme 
-                              with the objective to develop smart cities across the country, making them citizen-friendly
-                              and sustainable.<br>
-                            </p>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                            <div class="d-flex flex-row align-items-center mb-1">
-                                <!-- <h4 class="mb-1 me-1">Comments here</h4> -->
-                                <!-- <span class="text-danger"><s>Add a Comment</s></span> -->
-                            </div>
-                            <!-- <h6 class="text-success">Comments</h6> -->
-                            <div class="d-flex flex-column mt-4">
-                                <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox">Add a Comment</button>
-                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection">See Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentsSection">
-                        <div class="card card-body">
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">John</h6>
-                                    <p class="mb-0">It helped a lot</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3 ms-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Max</h6>
-                                    <p class="mb-0">Shut up</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentBox">
-                        <div class="card card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                            <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!-- 3rd policy -->
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 border rounded-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                <img src="../images/Pradhan Mantri Jan Arogya Yojana.png" class="w-100" />
-                                    <div class="hover-overlay">
-                                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-6">
-                          <a href="https://web.umang.gov.in/landing/department/pradhan-mantri-jan-arogya-yojana.html" style="text-decoration: none;" target="_blank"><h5>Pradhan Mantri Jan Arogya Yojana</h5></a>
-                            <div class="d-flex flex-row">
-                                <div class="text-danger mb-1 me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                </div>
-                                <span>113</span>
-                            </div>
-                            <div class="mt-1 mb-0 text-muted small">
-                                <span class="text-primary"> • </span>
-                                <span>Health Assurance</span>
-                                <span class="text-primary"> • </span>
-                                <span>INR 5 lakh cover</span>
-                                <span class="text-primary"> • </span>
-                                <span>Beneficial Impact<br /></span>
-                            </div>
-                            <!-- text-truncate -->
-                            <p class=" mb-4 mb-md-0">
-                              Pradhan Mantri Jan Arogya Yojana, which entails the world’s largest health assurance scheme,
-                              with the objective of providing a health cover of INR 5 lakh per family per year for the poor 
-                              and vulnerable households.<br>
-                            </p>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                            <div class="d-flex flex-row align-items-center mb-1">
-                                <!-- <h4 class="mb-1 me-1">Comments here</h4> -->
-                                <!-- <span class="text-danger"><s>Add a Comment</s></span> -->
-                            </div>
-                            <!-- <h6 class="text-success">Comments</h6> -->
-                            <div class="d-flex flex-column mt-4">
-                                <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox3">Add a Comment</button>
-                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection3">See Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentsSection3">
-                        <div class="card card-body">
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">John</h6>
-                                    <p class="mb-0">It helped a lot</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3 ms-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Max</h6>
-                                    <p class="mb-0">Shut up</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentBox3">
-                        <div class="card card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                            <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+        <% }) %>
 
-      <!-- Samagra Shiksha Abhiyan -->
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 border rounded-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                <img src="../images/Samagra Shiksha Abhiyan.png" class="w-100" />
-                                <div class="hover-overlay">
-                                    <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-xl-6">
-                            <a href="https://samagra.education.gov.in/" style="text-decoration: none;" target="_blank"><h5>Samagra Shiksha Abhiyan</h5></a>
-                            <div class="d-flex flex-row">
-                                <div class="text-danger mb-1 me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                    <i class="fa-regular fa-star" style="color: #120d0d;"></i>
-                                </div>
-                                <span>70</span>
-                            </div>
-                            <div class="mt-1 mb-0 text-muted small">
-                                <span>Education</span>
-                                <span class="text-primary"> • </span>
-                                <span>Equitable Learning</span>
-                                <span class="text-primary"> • </span>
-                                <span>Human Capital<br /></span>
-                            </div>
-                            <p class="mb-4 mb-md-0">
-                                Samagra Shiksha Abhiyan presents an overarching and comprehensive programme for the school 
-                                education sector with the broader goal of improving school effectiveness, measured in terms
-                                 of equal opportunities for schooling and equitable learning outcomes. 
-                            </p>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                            <div class="d-flex flex-column mt-4">
-                                <button class="btn btn-primary btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#commentBox5">Add a Comment</button>
-                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#commentsSection5">See Comments</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentsSection5">
-                        <div class="card card-body">
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">John</h6>
-                                    <p class="mb-0">It helped a lot</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3 ms-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="User Image">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Max</h6>
-                                    <p class="mb-0">Shut up</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse mt-4" id="commentBox5">
-                        <div class="card card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-                            <button class="btn btn-primary btn-sm mt-2" type="button">Submit Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- page indexing -->
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item "><a class="page-link" href="#">2</a></li>
-            <li class="page-item "><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" >Next</a>
-            </li>
-        </ul>
-    </nav>
-
+        <!-- page indexing -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item "><a class="page-link" href="#">2</a></li>
+                <li class="page-item "><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" >Next</a>
+                </li>
+            </ul>
+        </nav>
     </div> 
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
-
 <%-include('./footer.ejs')%>
-<!-- 
-</body>
-</html> -->

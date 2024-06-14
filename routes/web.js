@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const FrontController = require('../controllers/FrontController');
 const ContactController = require('../controllers/ContactController');
-const checkUserAuth = require('../middleware/auth')
+const PolicyController = require('../controllers/PolicyController');
+const checkUserAuth = require('../middleware/auth');
 
 router.get('/', FrontController.home)
 router.get('/login', FrontController.login)
@@ -10,6 +11,8 @@ router.get('/login', FrontController.login)
 router.get('/challenge',FrontController.challenge)
 
 router.get('/policy', FrontController.policy)
+router.post('/addPolicy', PolicyController.addPolicy)
+router.post('/addComment', PolicyController.addComment)
 
 router.get('/dashboard',checkUserAuth, FrontController.dashboard)
 
