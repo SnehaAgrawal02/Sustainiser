@@ -1231,3 +1231,9 @@ preloader
     opacity: 0;
   }
 }
+
+/* narratives css start */
+.stories{
+  margin-top: 140px ;
+  box-shadow: 2px 2px 10px #214621 ;
+}
