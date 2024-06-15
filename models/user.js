@@ -31,6 +31,10 @@ const UserSchema = new mongoose.Schema(
         Challenges:{
             type:Number,
             default:0
+        },
+
+        Domain:{
+            type:[String]                      // Changed
         }
     },
     { timestamps: true }
