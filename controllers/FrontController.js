@@ -135,10 +135,12 @@ class FrontController {
             // To upload Image on Cloud if an image is uploaded
             if (req.files && req.files.image) {
                 const file = req.files.image;
+                // console.log(file)
                 imageUpload = await cloudinary.uploader.upload(file.tempFilePath, {
                     folder: 'sustainiser'
                 });
             }
+            // console.log(imageUpload)
     
             const { n, e, p, cp, Domain } = req.body;
             const user = await UserModel.findOne({ email: e });
@@ -155,8 +157,8 @@ class FrontController {
                             email: e,
                             password: hashPassword,
                             image: {
-                                public_id: imageUpload.public_id ,
-                                url: imageUpload.secure_url 
+                                public_id: imageUpload ? imageUpload.public_id : 'sustainiser/zyfggqoz5bud2fjxxtsm',
+                                url: imageUpload ? imageUpload.secure_url : 'https://res.cloudinary.com/dmhs50pdp/image/upload/v1718462003/sustainiser/zyfggqoz5bud2fjxxtsm.png'
                             },
                             Domain: Domain,
                         });
