@@ -2,6 +2,7 @@ const UserModel = require('../models/user')
 const axios= require("axios")
 const PolicyModel = require('../models/policy');
 
+const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -46,17 +47,14 @@ class FrontController {
     // Challenge section
     static challenge= async (req,res)=>{
         try{
-
-
-            // Change
-
-           const plant= await UserModel.find({Domain:"Plantation"}).sort({score:-1,name:1}).limit(10).exec()
-           const recycle= await UserModel.find({Domain:"Recycling"}).sort({score:-1,name:1}).limit(10).exec()
-           const waste= await UserModel.find({Domain:"Best out of Waste"}).sort({score:-1,name:1}).limit(10).exec()
-           const carbon= await UserModel.find({Domain:"Reducing Carbon Emissions"}).sort({score:-1,name:1}).limit(10).exec()
-         
-        
-           res.render('user/challenge', {plant,recycle,waste,carbon });
+            const plant= await UserModel.find({Domain:"Plantation"}).sort({score:-1,name:1}).limit(10).exec()
+            const recycle= await UserModel.find({Domain:"Recycling"}).sort({score:-1,name:1}).limit(10).exec()
+            const waste= await UserModel.find({Domain:"Best out of Waste"}).sort({score:-1,name:1}).limit(10).exec()
+            const carbon= await UserModel.find({Domain:"Reducing Carbon Emissions"}).sort({score:-1,name:1}).limit(10).exec()
+            // const data = await UserModel.find()
+            // console.log(plant, recycle, waste, carbon)
+            // console.log(data)
+           res.render('user/challenge',{plant, recycle, waste, carbon});
         }catch(err){
             console.log(err,err.message);
             res.status(500).send('An error occurred while fetching leaderboard data.');
@@ -142,12 +140,12 @@ class FrontController {
                 });
             }
     
-            const { n, e, p, cp } = req.body;
+            const { n, e, p, cp, Domain } = req.body;
             const user = await UserModel.findOne({ email: e });
     
             if (user) {
                 req.flash('error', 'Email Already Exists.');
-                res.redirect('/register');
+                res.redirect('/login');
             } else {
                 if (n && e && p && cp) {
                     if (p == cp) {
@@ -157,14 +155,25 @@ class FrontController {
                             email: e,
                             password: hashPassword,
                             image: {
-                                public_id: imageUpload ? imageUpload.public_id : 'sustainiser/ogjhqekpvgaoknrunb4y',
-                                url: imageUpload ? imageUpload.secure_url : 'https://res.cloudinary.com/dmtgrirpq/image/upload/v1709919759/sustainiser/ogjhqekpvgaoknrunb4y.webp'
-                            }
+                                public_id: imageUpload.public_id ,
+                                url: imageUpload.secure_url 
+                            },
+                            Domain: Domain,
                         });
     
                         // To save data
                         const userData = await result.save();
-                        res.redirect('/login')
+                        if (userData) {
+                            // To Generate Token
+                            const token = jwt.sign({ ID: userData._id }, 'guptchabi@123456');
+                            res.cookie('token', token);
+                            this.sendVerifyMail(n, e, userData._id);
+                            req.flash("success", "Successfully Registered, Please Verify your Email.");
+                            res.redirect("/login");
+                        } else {
+                            req.flash('error', 'Not a Verified User.');
+                            res.redirect('/login');
+                        }
                     } else {
                         req.flash('error', 'Password & Confirm Password must be Same.');
                         res.redirect('/login');
@@ -175,6 +184,47 @@ class FrontController {
                 }
             }
         } catch (err) {
+            console.log(err);
+        }
+    }
+
+    static sendVerifyMail = async (n, e, user_id) => {
+        // console.log(name,email,status,comment)
+        // connenct with the smtp server
+    
+        let transporter = await nodemailer.createTransport({
+          host: "smtp.gmail.com",
+          port: 587,
+    
+          auth: {
+            user: "collablab2243@gmail.com",
+            pass: "obdojrysnnojlkyu"
+          },
+        });
+        await transporter.sendMail({
+            from: "test@gmail.com", // sender address
+            to: e, // list of receivers
+            subject: "For Verification mail", // Subject line
+            text: "hello", // plain text body
+            html:
+              "<p>Hii " +
+              n +
+              ',Please click here to <a href="http://localhost:3000/verify?id=' +
+              user_id +
+              '">Verify</a>Your mail</p>.',
+        })
+    }
+
+    static verify = async (req, res) => {
+        try{
+            const updateinfo = await UserModel.findByIdAndUpdate(req.query.id, {
+                isVerified: 1,
+            });
+            if(updateinfo)
+            {
+            res.redirect("/dashboard");
+            }
+        }catch(err){
             console.log(err);
         }
     }
@@ -190,8 +240,13 @@ class FrontController {
                     const token = jwt.sign({ ID: user.id }, 'guptchabi@123456');
                     // console.log(token)
                     res.cookie('token',token)
-                    req.flash('success','Successfully Logged in.')
-                    res.redirect('/')
+                    if(user.isVerified == 1){
+                        req.flash('success','Successfully Logged in.')
+                        res.redirect('/dashboard')
+                    }else {
+                        req.flash('error', 'Please Verify your Email First')
+                        res.redirect('/login')
+                    }
                 }else{
                     req.flash('error','Email or Password is Not Correct.')
                     res.redirect('/login');
