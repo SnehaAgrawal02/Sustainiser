@@ -130,6 +130,16 @@ class FrontController {
         }
     }
 
+    //narratives
+    static narratives = async (req, res) => {
+        try{
+
+            res.render('narratives');
+        }catch(err){
+            console.log(err);
+        }
+    }
+
     static userinsert = async (req, res) => {
         try {
             let imageUpload = null; // Set default value for image upload
