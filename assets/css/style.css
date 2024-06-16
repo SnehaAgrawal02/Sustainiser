@@ -1242,3 +1242,20 @@ preloader
   font-family: cursive;
   padding-bottom: 28px;
 }
+.rating {
+  unicode-bidi: bidi-override;
+  text-align: left;
+  margin-top: 10px;
+}
+.star {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.2s;
+  display: inline-block;
+}
+.star.rated,
+.star.hovered {
+  color: gold;
+}
+        

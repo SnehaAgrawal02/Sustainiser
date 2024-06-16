@@ -20,6 +20,9 @@
                             <p class="card-text">Over 40 years, Payeng single-handedly turned the desolate landscape into the lush Molai forest, covering 1,360 acres. His forest now houses Bengal tigers, Indian rhinoceros, elephants, and many other species.
                             </p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="jadhav-payeng">
+                                <span class="star" data-rating="1">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="5">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,6 +34,9 @@
                             <p class="card-text">In the heart of Jharkhand's Saraikela Kharsawan district, one of the most underdeveloped regions, 52-year-old Chami Murmu has sparked a green revolution. Her journey began at 16, driven by the need to support her family after losing her father and brother.
                             </p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="chami-murmu">
+                                <span class="star" data-rating="1">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="5">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,6 +50,9 @@
                                 Her work empowered farmers to reclaim control over their agriculture, combating the rise of genetically modified organisms (GMOs) and corporate seed control
                             .</p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="vandana-shiva">
+                                <span class="star" data-rating="1">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="5">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +76,9 @@
 
                             </p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="raj">
+                                <span class="star" data-rating="1">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="5">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -84,6 +96,9 @@
 
                             </p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="susan">
+                                <span class="star" data-rating="5">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="1">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,6 +114,9 @@
                                   into green oases, improved air quality, and provided residents with fresh, home-grown food.
                             </p>
                             <button class="btn btn-info">Read More...</button>
+                            <div class="rating" data-story="ahmed">
+                                <span class="star" data-rating="5">☆</span><span class="star" data-rating="4">☆</span><span class="star" data-rating="3">☆</span><span class="star" data-rating="2">☆</span><span class="star" data-rating="1">☆</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,5 +128,34 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.star').on('click', function() {
+                var rating = $(this).data('rating');
+                var story = $(this).parent().data('story');
+                
+        
+                $(this).siblings().removeClass('rated');
+                $(this).prevAll().addClass('rated');
+                $(this).addClass('rated');
+                
+               //backend (yet to be implemented)
+                /*
+                $.ajax({
+                    url: '/rate-story',
+                    method: 'POST',
+                    data: {
+                        story: story,
+                        rating: rating
+                    },
+                    success: function(response) {
+                        // Handle success
+                    }
+                });
+                */
+            });
+        });
+    </script>
 </div>
 <%-include('./footer.ejs')%>
