@@ -130,10 +130,8 @@ class FrontController {
         }
     }
 
-    //narratives
     static narratives = async (req, res) => {
         try{
-
             res.render('narratives');
         }catch(err){
             console.log(err);
@@ -201,7 +199,7 @@ class FrontController {
                     // console.log(token)
                     res.cookie('token',token)
                     req.flash('success','Successfully Logged in.')
-                    res.redirect('/')
+                    res.redirect('/dashboard')
                 }else{
                     req.flash('error','Email or Password is Not Correct.')
                     res.redirect('/login');
