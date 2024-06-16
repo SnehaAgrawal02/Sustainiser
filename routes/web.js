@@ -19,6 +19,7 @@ router.get('/challenge',FrontController.challenge)
 router.get('/policy', FrontController.policy)
 router.post('/addPolicy', PolicyController.addPolicy)
 router.post('/addComment', PolicyController.addComment)
+router.get('/narratives', FrontController.narratives)
 
 router.get('/dashboard',checkUserAuth, FrontController.dashboard)
 
