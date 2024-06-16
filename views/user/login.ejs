@@ -100,7 +100,7 @@
 
 
       <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="tab-register">
-        <form action="/userInsert" method="post" enctype="multipart/form-data">
+        <form action="/userInsert" method="post">
           <div class="text-center mb-3">
             <p>Sign up with:</p>
             <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
@@ -143,14 +143,18 @@
             <label class="form-label" for="registerRepeatPassword">Confirm password</label>
           </div>
 
-          <!-- Domain Selection Change -->
-          <div class="form-outline mb-4">
-            <label for="">Domain :</label>
-            <input type="checkbox" name="Domain" value="Plantation" />Plantation
-            <input type="checkbox" name="Domain" value="Recycling" />Recycling
-            <input type="checkbox" name="Domain" value="Best out of Waste" />Best out of Waste
-            <input type="checkbox" name="Domain" value="Reducing Carbon Emissions" />Reducing Carbon Emissions
-          </div>
+           <!-- Domain Selection           Change -->
+<div class="form-outline mb-4">
+  <select  required class="form-select form-outline mb-4" aria-label="Default select example" >
+    <option selected>Open this select menu</option>
+    <option value="Plantation">Plantation </option>
+    <option value="Recycling ">Recycling </option>
+    <option value="Best out of Waste">Best out of Waste</option>
+    <option value="Reducing Carbon Emissions"> Reducing Carbon Emissions</option>
+  </select>
+
+</div>
+           
 
           <!-- Image -->
           <div data-mdb-input-init class="form-outline mb-4">

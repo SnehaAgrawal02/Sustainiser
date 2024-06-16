@@ -7,7 +7,6 @@ const checkUserAuth = require('../middleware/auth');
 
 router.get('/', FrontController.home)
 router.get('/login', FrontController.login)
-router.get('/verify',FrontController.verify)
 
 router.get('/charts', FrontController.chart)
 
@@ -20,7 +19,6 @@ router.get('/challenge',FrontController.challenge)
 router.get('/policy', FrontController.policy)
 router.post('/addPolicy', PolicyController.addPolicy)
 router.post('/addComment', PolicyController.addComment)
-router.get('/narratives',FrontController.narratives)
 
 router.get('/dashboard',checkUserAuth, FrontController.dashboard)
 
